@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<h1>There is a new inquiry #<span th:text="${orderId}"></span></h1>
+<h2>From agricon.uk</h2>
+<h3>Customer information:</h3>
+<span th:text="'Customer email: ' + ${email} + ';'"></span><br/>
+<span th:text="'Customer phone: ' + ${phone} + ';'"></span><br/>
+<span th:text="'Customer name: ' + ${name} + ';'"></span><br/>
+<h3>Message:</h3>
+<span th:text="'Customer message: ' + ${message} + ';'"></span><br/>
+</body>
+</html>

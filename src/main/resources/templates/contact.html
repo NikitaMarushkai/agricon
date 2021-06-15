@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index.html :: head"></head>
+<body>
+<!-- navbar-->
+<div th:replace="index.html :: common-header"></div>
+<!-- Hero Slider -->
+<section class="bg-cover bg-position" style="background: url(img/hero-banner-3.jpg)">
+    <div class="dark-overlay dark-overlay-lighter py-5">
+        <div class="overlay-content">
+            <div class="container text-center py-5">
+                <h1 class="text-white">Contact</h1>
+                <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-none mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="py-5 bg-light shadow-sm index-forward">
+    <div class="container py-5">
+        <div class="card rounded-0 border-0">
+            <div class="card-body p-4 p-lg-5">
+                <div class="row py-5">
+                    <div class="col-lg-5">
+                        <h2>Make an <span class="text-primary">inquiry </span></h2>
+                        <p class="mb-5 text-muted">CP&S Limited at your service</p>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <h5 class="text-muted">Address</h5>
+                                <p class="text-muted">AMC HO. 12 Cumberland Ave, London NW10 7QL, England, UK</p>
+                            </li>
+                            <li>
+                                <h5 class="text-muted">Emails</h5>
+                                <p class="text-muted">Management: <a href="mailto:dan.w@agricon.uk">dan.w@agricon.uk</a></p>
+                                <p class="text-muted">APAC region, Russia, CIS: <a href="mailto:anna.z@agricon.uk">anna.z@agricon.uk</a></p>
+                                <p class="text-muted">EMEA: <a href="mailto:francis.p@agricon.uk">francis.p@agricon.uk</a></p>
+                                <p class="text-muted">Africa business development: <a href="mailto:achraf.elb@agricon.uk">achraf.elb@agricon.uk</a></p>
+                            </li>
+                            <li>
+                                <h5 class="text-muted">Phone</h5>
+                                <p class="text-muted">+44 7770 980 133</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7">
+                        <form th:action="@{/async/sendMail}" method="post" role="form" th:object="${orderForm}" class="contactForm">
+                            <div class="row">
+                                <div class="form-group col-lg-2">
+                                    <select required class="form-control" th:field="*{title}" name="title" id="title">
+                                        <option selected th:value="Mr" th:text="Mr"></option>
+                                        <option th:value="Mrs" th:text="Mrs"></option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-5">
+                                    <input class="form-control" type="text" th:field="*{firstName}" name="firstname" placeholder="First name">
+                                </div>
+                                <div class="form-group col-lg-5">
+                                    <input class="form-control" type="text" th:field="*{lastName}" name="lastname" placeholder="Last name">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <input class="form-control" type="tel" th:fiel="*{phone}" name="phone" placeholder="Phone number">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <input class="form-control" type="email" th:field="*{email}" name="email" placeholder="Email address">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <input class="form-control" type="text" th:field="*{subject}" name="subject" placeholder="Subject">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <textarea class="form-control" th:field="*{message}" name="message" rows="5"
+                                              placeholder="Write your inquery"></textarea>
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <button class="btn btn-outline-primary" type="submit">Submit inquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Map Section -->
+<section class="gmap" id="map"></section>
+<footer class="text-white bg-cover bg-center" style="background: url(img/hero-banner-1.jpg)" th:replace="index.html :: footer"></footer>
+<!-- JavaScript files-->
+<div th:replace="index.html :: scripts"></div>
+<script src="js/leaflet.js"></script>
+</body>
+</html>

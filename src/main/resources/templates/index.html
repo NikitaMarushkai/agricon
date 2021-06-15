@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agricon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="lib/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl.carousel/assets/owl.theme.default.min.css">
+    <!-- Leaflet-->
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- navbar-->
+<div th:fragment="common-header">
+    <header class="header">
+        <div class="bg-primary text-white py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 d-none d-lg-block">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3"><a class="reset-anchor" href="#"><i
+                                    class="fas fa-mobile mr-2"></i><span class="font-weight-normal text-small">+44 7770 980 133</span></a>
+                            </li>
+                            <li class="list-inline-item"><a class="reset-anchor" href="#"><i
+                                    class="fas fa-envelope mr-2"></i><span class="font-weight-normal text-small">info@agricon.uk</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <ul class="list-inline mb-0">
+<!--                            <li class="list-inline-item"><a class="font-weight-bold text-small reset-anchor"-->
+<!--                                                            href="#">FAQ</a></li>-->
+<!--                            <li class="list-inline-item">|</li>-->
+                            <li class="list-inline-item"><a class="font-weight-bold text-small reset-anchor" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light py-3 bg-white">
+            <div class="container"><a class="navbar-brand" href="/"><img src="img/logo.png" alt="" width="150"></a>
+                <h3 class="text-uppercase"><span class="text-primary">Passion </span>for excellence</h3>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-2">
+                            <!-- Link--><a class="nav-link active" href="/">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <!-- Link--><a class="nav-link" href="/services">Services</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <!-- Link--><a class="nav-link" href="/contact">Contact</a>
+                        </li>
+<!--                        <li class="nav-item ml-2 dropdown"><a class="nav-link dropdown-toggle pr-0"-->
+<!--                                                              id="navbarDropdownMenuLink" href="#"-->
+<!--                                                              data-toggle="dropdown"-->
+<!--                                                              aria-haspopup="true" aria-expanded="false">Pages</a>-->
+<!--                            <div class="dropdown-menu dropdown-menu-right mt-lg-4"-->
+<!--                                 aria-labelledby="navbarDropdownMenuLink">-->
+<!--                                <a class="dropdown-item text-small" href="index.html">Home</a><a-->
+<!--                                    class="dropdown-item text-small" href="/services">Services</a><a-->
+<!--                                    class="dropdown-item text-small" href="/contact">Contact </a></div>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<!-- Hero Slider -->
+<section>
+    <div class="owl-carousel owl-theme-default hero-slider owl-nav-custom">
+        <div class="hero-slide bg-cover bg-center py-5 with-border-image"
+             style="background: url(img/carousel_1.png)">
+            <div class="container text-white py-5 index-forward">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="h3 text-primary mb-0">Your needs</p>
+                        <h1>Making dreams come to life</h1>
+                        <p class="lead">We understand the needs of our customers and
+                        the role of agriulture in our life. Keeping that in mind, we do our best to
+                        supply you with all the parts you need. In a shortest time possible.</p><a class="btn btn-primary text-white" href="/services">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide bg-cover bg-center py-5 with-border-image"
+             style="background: url(img/carousel_2.jpg)">
+            <div class="container text-white py-5 index-forward">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="h3 text-primary mb-0">Building right</p>
+                        <h1>Always dedicated and devoted</h1>
+                        <p class="lead">We are aiming to provide you with the best possible delivery time. For your business to run smoothly
+                        </p><a class="btn btn-primary text-white" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide bg-cover bg-center py-5 with-border-image"
+             style="background: url(img/carousel_3.jpg)">
+            <div class="container text-white py-5 index-forward">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p class="h3 text-primary mb-0">Your dream</p>
+                        <h1>Is our responsibility</h1>
+                        <p class="lead">Our customers is our top priority and we are working for you to make your
+                            machinery work like a charm.
+                        </p><a class="btn btn-primary text-white" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section class="py-5 bg-light">
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <h2 class="text-uppercase"><span class="text-primary">Our </span>Services</h2>
+                    <p class="text-muted">We offer geniuine and replacements parts for all sorts of agricultural machinery.</p>
+                </div>
+            </div>
+        </header>
+        <div class="row text-center">
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="shadow-sm box">
+                    <div class="with-border-image-sm">
+                        <div class="position-relative overflow-hidden d-block">
+                            <img class="w-100" src="img/agri_parts.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="p-4 border bg-white">
+                        <h3 class="h5"><a class="reset-anchor" href="/services">Parts for agricultural machinery</a></h3>
+                        <p class="text-small text-muted">We supply parts for agricultural machinery for such brands as:
+                            CASE, New Holland, Flexi Coil,
+                            Fiatagri, Steiger, Steyr, Laverda, Massey Ferguson, John Deere, Claas, etc...</p><a
+                            class="btn btn-primary btn-sm text-white" href="/services">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <div class="shadow-sm box">
+                    <div class="with-border-image-sm">
+                        <div class="position-relative overflow-hidden d-block">
+                            <img class="w-100" src="img/diesel_engines.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="p-4 border bg-white">
+                        <h3 class="h5"><a class="reset-anchor" href="/services">Diesel engines and parts</a></h3>
+                        <p class="text-small text-muted">We are supplying engines and spare parts for FPT, Iveco,
+                            Komatsu, CAT and more
+                        </p><a class="btn btn-primary btn-sm text-white" href="/services">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="shadow-sm box">
+                    <div class="with-border-image-sm">
+                        <div class="position-relative overflow-hidden d-block">
+                            <img class="w-100" src="img/earth_moving.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="p-4 border bg-white">
+                        <h3 class="h5"><a class="reset-anchor" href="/services">Earth moving machinery parts</a></h3>
+                        <p class="text-small text-muted">We are selling geniune construction parts for earth moving
+                            machineries of brands like:
+                            New Holland construction, KOBELCO, Fiat hitachi, Fiat kobelco, O&K</p><a
+                            class="btn btn-primary btn-sm text-white" href="/services">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="shadow-sm box">
+                    <div class="with-border-image-sm">
+                        <div class="position-relative overflow-hidden d-block">
+                            <img class="w-100" src="img/used_agri.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="p-4 border bg-white">
+                        <h3 class="h5"><a class="reset-anchor" href="/services">Brokerage of used agicultural machinery</a></h3>
+                        <p class="text-small text-muted">We are also dealing with used machinery. If you need something,
+                            just let us know and we do that.
+                        </p><a class="btn btn-primary btn-sm text-white" href="/services">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Divider Section -->
+<section class="bg-cover bg-center" style="background: url(img/hero-banner-1.jpg)">
+    <div class="dark-overlay">
+        <div class="py-5 text-white overlay-content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 text-center text-lg-left mb-4 mb-lg-0">
+                        <h2 class="h3 mb-3">Trusted agricultiural supplier <span class="text-primary">Since 1981</span></h2>
+                        <p class="text-small mb-0">Success is the sum of small efforts, repeated
+                            day in and day out, <i>Robert Collier</i>.
+                            And we have done it since 1981…
+                            It’s not just because being better in what we do.
+                            It’s about what we do is different.
+                            Lets grow your business together!</p>
+                    </div>
+                    <div class="col-lg-5 text-center text-lg-right"><a class="btn btn-outline-light text-white"
+                                                                       href="/contact">Get a quote </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Works Section -->
+<section class="py-5">
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <h2 class="text-uppercase"><span class="text-primary">Our </span>Offers</h2>
+                    <p class="text-muted">Visit us regularly to stay tuned about our new arrivals</p>
+                </div>
+            </div>
+        </header>
+        <div class="row text-center">
+            <div class="col-lg-4 mb-4 mb-lg-0" th:each="item: ${news}">
+                <div class="shadow-sm box">
+                    <div class="position-relative overflow-hidden d-block">
+                        <img class="w-100" th:src="${item.image}" alt=""/>
+                    </div>
+                    <div class="p-4 bg-dark text-white">
+                        <h3 class="h5"><a class="reset-anchor" th:text="${item.header}">Injectors for industrial diesel engines</a></h3>
+                        <p class="small mb-0" th:text="${item.descr}"></p>
+                    </div>
+<!--                    <a class="btn btn-primary btn-block text-white" href="#">Read more</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--&lt;!&ndash; Testimonials Section &ndash;&gt;-->
+<!--<section class="py-5 bg-light">-->
+<!--    <div class="container py-5">-->
+<!--        <header class="text-center mb-5">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-7 mx-auto">-->
+<!--                    <h2 class="text-uppercase">What <span class="text-primary">our clients  </span>say</h2>-->
+<!--                    <p class="text-muted">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium-->
+<!--                        lectorum.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </header>-->
+<!--        <div class="owl-carousel testimonials-slider owl-theme">-->
+<!--            <div class="bg-white p-4 p-lg-5">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-10">-->
+<!--                        <div class="d-flex">-->
+<!--                            <div class="flex-grow-1" style="min-width: 60px"><img class="w-100"-->
+<!--                                                                                  src="img/testimonial-1.jpg"-->
+<!--                                                                                  alt="..."/></div>-->
+<!--                            <div class="ml-3 flex-grow-1">-->
+<!--                                <h3 class="h5">Outstanding quality</h3>-->
+<!--                                <ul class="list-inline small mb-4">-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                </ul>-->
+<!--                                <p class="text-small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing-->
+<!--                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad-->
+<!--                                    minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>-->
+<!--                                <h6 class="mb-0">- Jacklyn Fernandez</h6>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 d-none d-lg-block text-right"><i-->
+<!--                            class="fas fa-quote-right fa-2x text-primary"></i></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="bg-white p-4 p-lg-5">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-10">-->
+<!--                        <div class="d-flex">-->
+<!--                            <div class="flex-grow-1" style="min-width: 60px"><img class="w-100"-->
+<!--                                                                                  src="img/testimonial-2.jpg"-->
+<!--                                                                                  alt="..."/></div>-->
+<!--                            <div class="ml-3 flex-grow-1">-->
+<!--                                <h3 class="h5">Professional handling</h3>-->
+<!--                                <ul class="list-inline small mb-4">-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                </ul>-->
+<!--                                <p class="text-small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing-->
+<!--                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad-->
+<!--                                    minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>-->
+<!--                                <h6 class="mb-0">- Jason Doe</h6>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 d-none d-lg-block text-right"><i-->
+<!--                            class="fas fa-quote-right fa-2x text-primary"></i></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="bg-white p-4 p-lg-5">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-10">-->
+<!--                        <div class="d-flex">-->
+<!--                            <div class="flex-grow-1" style="min-width: 60px"><img class="w-100"-->
+<!--                                                                                  src="img/testimonial-1.jpg"-->
+<!--                                                                                  alt="..."/></div>-->
+<!--                            <div class="ml-3 flex-grow-1">-->
+<!--                                <h3 class="h5">Outstanding quality</h3>-->
+<!--                                <ul class="list-inline small mb-4">-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                </ul>-->
+<!--                                <p class="text-small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing-->
+<!--                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad-->
+<!--                                    minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>-->
+<!--                                <h6 class="mb-0">- Jacklyn Fernandez</h6>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 d-none d-lg-block text-right"><i-->
+<!--                            class="fas fa-quote-right fa-2x text-primary"></i></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="bg-white p-4 p-lg-5">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-10">-->
+<!--                        <div class="d-flex">-->
+<!--                            <div class="flex-grow-1" style="min-width: 60px"><img class="w-100"-->
+<!--                                                                                  src="img/testimonial-2.jpg"-->
+<!--                                                                                  alt="..."/></div>-->
+<!--                            <div class="ml-3 flex-grow-1">-->
+<!--                                <h3 class="h5">Professional handling</h3>-->
+<!--                                <ul class="list-inline small mb-4">-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                    <li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>-->
+<!--                                </ul>-->
+<!--                                <p class="text-small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing-->
+<!--                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad-->
+<!--                                    minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>-->
+<!--                                <h6 class="mb-0">- Jason Doe</h6>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 d-none d-lg-block text-right"><i-->
+<!--                            class="fas fa-quote-right fa-2x text-primary"></i></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<footer class="text-white bg-cover bg-center" style="background: url(img/hero-banner-1.jpg)" th:fragment="footer">
+    <div class="dark-overlay">
+        <div class="overlay-content">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-lg-4 col-md-6"><img class="mb-4" src="img/bottom_logo.jpg" alt="" width="120">
+                        <p class="text-uppercase mb-4 text-white">CP&S LTD</p>
+                        <p class="mb-1"><i class="fas fa-envelope mr-3 text-primary fa-fw"></i><span class="text-small">info@agricon.uk</span>
+                        </p>
+                        <p class="mb-1"><i class="fas fa-mobile mr-3 text-primary fa-fw"></i><span class="text-small">+44 7770 980 133</span>
+                        </p>
+                        <p class="mb-1"><i class="fas fa-map-marker-alt mr-3 text-primary fa-fw"></i><span
+                                class="text-small">AMC HO. 12 Cumberland Ave, London NW10 7QL, England, UK</span></p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="text-uppercase text-primary mt-3 mb-4">Quick <span class="text-white">links</span>
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="footer-link" href="/">Home</a></li>
+                            <li class="mb-2"><a class="footer-link" href="/services">Services</a></li>
+                            <li class="mb-2"><a class="footer-link" href="/contact">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="text-uppercase text-primary mt-3 mb-4">Our <span class="text-white">offers</span>
+                        </h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="footer-link">Agricultural machinery</a></li>
+                            <li class="mb-2"><a class="footer-link">Diesel engines and parts</a></li>
+                            <li class="mb-2"><a class="footer-link">Earth moving machinery parts</a></li>
+                            <li class="mb-2"><a class="footer-link">Used agricultural machinery</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h6 class="text-uppercase text-primary mt-3 mb-4">Opening <span class="text-white">hours</span>
+                        </h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex align-items-center justify-content-between pb-2">
+                                <p class="text-small mb-0">Monday </p><span
+                                    class="text-small mb-0">9:00 am - 06:00 pm</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between py-1">
+                                <p class="text-small mb-0">Tuesday </p><span
+                                    class="text-small mb-0">9:00 am - 06:00 pm</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between py-1">
+                                <p class="text-small mb-0">Wednesday </p><span class="text-small mb-0">9:00 am - 06:00 pm</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between py-1">
+                                <p class="text-small mb-0">Friday</p><span
+                                    class="text-small mb-0">9:00 am - 06:00 pm</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between py-1">
+                                <p class="text-small mb-0">Saturday</p>
+                                <p class="text-small mb-0 text-uppercase text-primary">9:00 am - 06:00 pm</p>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between py-1">
+                                <p class="text-small mb-0">Sunday</p>
+                                <p class="text-small mb-0 text-uppercase text-primary">Closed</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- JavaScript files-->
+<div th:fragment="scripts">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/owl.carousel/owl.carousel.min.js"></script>
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="js/front.js"></script>
+    <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite -
+        //   see more here
+        //   https://css-tricks.com/ajaxing-svg-sprite/
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function (e) {
+                var div = document.createElement("div");
+                div.className = 'd-none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+
+        // this is set to BootstrapTemple website as you cannot
+        // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+        // while using file:// protocol
+        // pls don't forget to change to your domain :)
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</div>
+</body>
+</html>
