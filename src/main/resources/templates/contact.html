@@ -21,7 +21,7 @@
     </div>
 </section>
 <!-- Contact Section -->
-<section class="py-5 bg-light shadow-sm index-forward">
+<section class="py-5 bg-light shadow-sm index-forward" id="contact">
     <div class="container py-5">
         <div class="card rounded-0 border-0">
             <div class="card-body p-4 p-lg-5">
@@ -36,10 +36,14 @@
                             </li>
                             <li>
                                 <h5 class="text-muted">Emails</h5>
-                                <p class="text-muted">Management: <a href="mailto:dan.w@agricon.uk">dan.w@agricon.uk</a></p>
-                                <p class="text-muted">APAC region, Russia, CIS: <a href="mailto:anna.z@agricon.uk">anna.z@agricon.uk</a></p>
-                                <p class="text-muted">EMEA: <a href="mailto:francis.p@agricon.uk">francis.p@agricon.uk</a></p>
-                                <p class="text-muted">Africa business development: <a href="mailto:achraf.elb@agricon.uk">achraf.elb@agricon.uk</a></p>
+                                <p class="text-muted">Management: <a href="mailto:dan.w@agricon.uk">dan.w@agricon.uk</a>
+                                </p>
+                                <p class="text-muted">APAC region, Russia, CIS: <a href="mailto:anna.z@agricon.uk">anna.z@agricon.uk</a>
+                                </p>
+                                <p class="text-muted">EMEA: <a
+                                        href="mailto:francis.p@agricon.uk">francis.p@agricon.uk</a></p>
+                                <p class="text-muted">Africa business development: <a
+                                        href="mailto:achraf.elb@agricon.uk">achraf.elb@agricon.uk</a></p>
                             </li>
                             <li>
                                 <h5 class="text-muted">Phone</h5>
@@ -47,34 +51,52 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-7">
-                        <form th:action="@{/async/sendMail}" method="post" role="form" th:object="${orderForm}" class="contactForm">
+                    <div class="form col-lg-7">
+                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <form th:action="@{/async/sendMail}" method="post" role="form" th:object="${orderForm}"
+                              class="contactForm">
                             <div class="row">
                                 <div class="form-group col-lg-2">
-                                    <select required class="form-control" th:field="*{title}" name="title" id="title">
+                                    <select required class="form-control my-select" th:field="*{title}" name="title" id="title">
                                         <option selected th:value="Mr" th:text="Mr"></option>
                                         <option th:value="Mrs" th:text="Mrs"></option>
                                     </select>
                                 </div>
                                 <div class="form-group col-lg-5">
-                                    <input class="form-control" type="text" th:field="*{firstName}" name="firstname" placeholder="First name">
+                                    <input class="form-control" type="text" th:field="*{firstName}" name="firstname"
+                                           placeholder="First name" data-rule="minlen:2"
+                                           data-msg="Please enter at least 2 symbols">
+                                    <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-lg-5">
-                                    <input class="form-control" type="text" th:field="*{lastName}" name="lastname" placeholder="Last name">
+                                    <input class="form-control" type="text" th:field="*{lastName}" name="lastname"
+                                           placeholder="Last name" data-rule="minlen:2"
+                                           data-msg="Please enter at least 2 symbols">
+                                    <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <input class="form-control" type="tel" th:fiel="*{phone}" name="phone" placeholder="Phone number">
+                                    <input class="form-control" type="tel" th:fiel="*{phone}" name="phone"
+                                           placeholder="Phone number">
+                                    <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-lg-6">
-                                    <input class="form-control" type="email" th:field="*{email}" name="email" placeholder="Email address">
+                                    <input class="form-control" type="email" th:field="*{email}" name="email"
+                                           placeholder="Email address" data-rule="email" data-msg="Please enter a valid email">
+                                    <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-lg-12">
-                                    <input class="form-control" type="text" th:field="*{subject}" name="subject" placeholder="Subject">
+                                    <input class="form-control" type="text" th:field="*{subject}" name="subject"
+                                           placeholder="Subject" data-rule="minlen:4"
+                                           data-msg="Please enter at least 4 symbols of subject">
+                                    <div class="validation"></div>
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <textarea class="form-control" th:field="*{message}" name="message" rows="5"
-                                              placeholder="Write your inquery"></textarea>
+                                              placeholder="Write your inquery" data-rule="required" data-msg="Please write your message"></textarea>
+                                    <div class="validation"></div>
                                 </div>
+                                <input type="hidden" id="token", th:field="*{token}" name="token">
                                 <div class="form-group col-lg-12">
                                     <button class="btn btn-outline-primary" type="submit">Submit inquiry</button>
                                 </div>
@@ -88,9 +110,11 @@
 </section>
 <!-- Map Section -->
 <section class="gmap" id="map"></section>
-<footer class="text-white bg-cover bg-center" style="background: url(img/hero-banner-1.jpg)" th:replace="index.html :: footer"></footer>
+<footer class="text-white bg-cover bg-center" style="background: url(img/hero-banner-1.jpg)"
+        th:replace="index.html :: footer"></footer>
 <!-- JavaScript files-->
 <div th:replace="index.html :: scripts"></div>
 <script src="js/leaflet.js"></script>
+<script src="js/contactform.js"></script>
 </body>
 </html>

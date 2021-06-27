@@ -11,6 +11,7 @@ class OrderForm {
     String email
     String phone
     String message
+    String token
 
     String getName() {
         String.format("%s %s %s", title, firstName, lastName)

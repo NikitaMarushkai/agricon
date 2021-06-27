@@ -5,6 +5,11 @@ server:
     application-display-name: Agricon
     context-path: /
 
+recaptcha:
+  site: https://www.google.com/recaptcha/api/siteverify
+  key: 6Lf0xUkbAAAAAG-oFr1LloawlDuXWV3MksgrF6Ih
+  secret: 6Lf0xUkbAAAAADu0F6DePF06GKTYKU_HsM_dt8Vz
+
 spring:
   servlet:
     multipart:

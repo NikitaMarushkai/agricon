@@ -25,8 +25,13 @@ class ActionsRestController {
     String processMailForm(@ModelAttribute OrderForm orderForm) {
         try {
             orderForm.orderId = ThreadLocalRandom.current().nextInt(0, 999999)
-            mailClient.sendOrderNotification(orderForm)
-            mailClient.sendCustomerOrderNotification(orderForm)
+            if (mailClient.checkRecaptcha(orderForm.token)) {
+                mailClient.sendOrderNotification(orderForm)
+                mailClient.sendCustomerOrderNotification(orderForm)
+            } else {
+                return "You are recognised as a bot by our system. Please try with another browser or use our " +
+                        "contacts section to send your request."
+            }
         } catch(MailException mailException) {
             mailException.printStackTrace()
             return "There is something wrong with our mail client. Please contact us using contacts section."
